@@ -1,0 +1,22 @@
+package com.multicampus.biz.user;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	public void insertUser(UserVO vo) {}
+	public void updateUser(UserVO vo) {}
+	public void deleteUser(UserVO vo) {}
+	public UserVO getUser(UserVO vo) {
+		return null;
+	}
+	public List<UserVO> getUserList(UserVO vo) {
+		return null;
+	}
+
+}

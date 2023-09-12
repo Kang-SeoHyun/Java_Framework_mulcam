@@ -1,0 +1,5 @@
+package com.multicampus.biz.common;
+
+public class BoardPointcut {
+
+}

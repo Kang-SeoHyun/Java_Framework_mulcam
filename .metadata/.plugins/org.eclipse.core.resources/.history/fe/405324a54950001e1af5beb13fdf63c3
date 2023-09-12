@@ -1,0 +1,20 @@
+package polymorphism1;
+
+public class SamsungTV {
+	public SamsungTV() {
+		// ctl space 누르면 디폴트생성자 만들수 ㄷ있음
+		System.out.println("===> SamsungTV 생성");
+	}
+	public powerOn() {
+		System.out.println("SamsungTv---전원 켠다.");
+	}
+	public powerOff() {
+		System.out.println("SamsungTv---전원 끈다.");
+	}
+	public volumeUp() {
+		System.out.println("SamsungTv---소리 올린다.");
+	}
+	public volumeDown() {
+		System.out.println("SamsungTv---소리 내린다.");
+	}
+}
