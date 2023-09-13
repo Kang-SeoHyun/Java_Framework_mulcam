@@ -1,2 +1,3 @@
-# Java_Framework_mulcam
-멀티캠퍼스 교육 - Spring, iBatis, MyBatis
+# Java_Framework : Spring, iBatis, MyBatis
+
+세종대, 건대에서 맛있는 거 먹기.
