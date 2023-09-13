@@ -17,7 +17,7 @@ public class BoardServiceClient {
 		
 		// 3. LookUp한 객체의 메소드를 테스트한다.
 		BoardVO vo = new BoardVO();
-		vo.setSeq(100);
+		vo.setSeq(101);
 		vo.setTitle("IoC 테스트");
 		vo.setWriter("테스터");
 		vo.setContent("IoC 테스트 중입니다.");

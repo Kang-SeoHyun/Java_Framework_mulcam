@@ -15,7 +15,7 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private BoardDAO boardDAO;
 	
-	private BoardServiceImpl() {
+	public BoardServiceImpl() {
 		System.out.println("===> BoardServiceImpl »ý¼º");
 	}
 	
