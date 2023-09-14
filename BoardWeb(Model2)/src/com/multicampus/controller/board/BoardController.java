@@ -1,0 +1,90 @@
+package com.multicampus.controller.board;
+
+import java.io.File;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.multicampus.biz.board.BoardDAOJDBC;
+import com.multicampus.biz.board.BoardService;
+import com.multicampus.biz.board.BoardVO;
+
+// Model에 "board"라는 이름의 데이터가 등록될 때, 세션에도 "board"라는 이름으로 동일하게 등록해라.
+@SessionAttributes("board")
+@Controller
+public class BoardController {
+	
+	@Autowired
+	private BoardService boardService;
+	
+	// 글 등록 화면으로 이동
+	@RequestMapping("/insertBoardView.do")
+	public String insertBoardView() throws Exception {
+		return "insertBoard";
+	}
+
+	// 글 등록 
+	@RequestMapping("/insertBoard.do")
+	public String insertBoard(BoardVO vo) throws Exception {
+		
+		// 1. 파일 업로드 처리
+		MultipartFile upload = vo.getUploadFile();
+		if (!upload.isEmpty()) {
+			String fileName = upload.getOriginalFilename();
+			upload.transferTo(new File("C:/DEV/upload_files/" + fileName));
+		}
+		
+		// 2. 글 등록 처리
+		boardService.insertBoard(vo);
+		return "redirect:getBoardList.do";
+	}
+	
+	// 글 수정
+	@RequestMapping("/updateBoard.do")
+	// 세션에 보드 라는 이름으로 등록된 객체가 있다면 그 객체를 우선 적용해라.
+	public String updateBoard(@ModelAttribute("board") BoardVO vo) throws Exception {
+		boardService.updateBoard(vo);
+		return "forward:getBoardList.do";
+	}
+	
+	// 글 삭제
+	@RequestMapping("/deleteBoard.do")
+	public String deleteBoard(BoardVO vo) throws Exception {
+		boardService.deleteBoard(vo);
+		return "forward:getBoardList.do";
+	}
+	
+	// 글 상세 조회
+	@RequestMapping("/getBoard.do")
+	public String getBoard(BoardVO vo, Model model) throws Exception {
+		model.addAttribute("board", boardService.getBoard(vo));
+		return "getBoard";
+	}
+	
+	// 글 목록 검색
+	@RequestMapping("/getBoardList.do")
+	public String getBoardList(BoardVO vo, Model model) throws Exception {
+		//Null check
+		if (vo.getSearchCondition() == null) vo.setSearchCondition("TITLE");
+		if (vo.getSearchKeyword() == null) vo.setSearchKeyword("");
+		model.addAttribute("boardList", boardService.getBoardList(vo));
+		model.addAttribute("search", vo);
+		return "getBoardList";
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
