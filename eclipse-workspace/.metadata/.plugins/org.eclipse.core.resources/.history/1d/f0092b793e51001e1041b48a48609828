@@ -1,0 +1,7 @@
+package com.multicampus.biz.board;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class BoardRowMapper implements RowMapper<T> {
+
+}

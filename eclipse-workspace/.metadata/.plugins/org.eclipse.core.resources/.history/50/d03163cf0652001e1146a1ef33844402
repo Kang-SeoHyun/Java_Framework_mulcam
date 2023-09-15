@@ -1,0 +1,32 @@
+package com.multicampus.controller.board;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
+
+public class LogoutController implements Controller {
+
+	@Override
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		
+		
+		// ModelAndView 객체에 이동할 화면 이름(ViewName)을 설정하여 리턴하면 해당 화면으로 무조건 Forward 된다.
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("getBoardList.do");
+		return mav;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+package com.multicampus.biz;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.multicampus.biz.board.BoardService;
+
+public class BoardServiceClient {
+
+	public static void main(String[] args) {
+		// 1. 스프링 컨테이너를 생성(구동)한다.
+		GenericXmlApplicationContext container = 
+			new GenericXmlApplicationContext("business-layer.xml");
+		
+		// 2. 컨테이너로부터 BoardService 타입의 객체를 Lookup한다. 
+		BoardService boardService = (BoardService) container.getBean("boardService");
+	}
+
+}
+
+
+
+
+
+
+
+
+

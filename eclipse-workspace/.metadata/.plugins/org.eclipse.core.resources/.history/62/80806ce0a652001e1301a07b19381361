@@ -1,0 +1,60 @@
+package com.multicampus.controller.board;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.multicampus.biz.board.BoardDAOJDBC;
+import com.multicampus.biz.board.BoardVO;
+
+@Controller
+public class BoardController {
+
+	// 글 등록 
+	@RequestMapping("/insertBoard.do")
+	public String insertBoard(BoardVO vo, BoardDAOJDBC dao) throws Exception {
+		dao.insertBoard(vo);
+		return "getBoardList.do";
+	}
+	
+	// 글 수정
+	@RequestMapping("/updateBoard.do")
+	public String updateBoard(BoardVO vo, BoardDAOJDBC dao) throws Exception {
+		dao.updateBoard(vo);
+		return "getBoardList.do";
+	}
+	
+	// 글 삭제
+	@RequestMapping("/deleteBoard.do")
+	public String deleteBoard(BoardVO vo, BoardDAOJDBC dao) throws Exception {
+		dao.deleteBoard(vo);
+		return "getBoardList.do";
+	}
+	
+	// 글 상세 조회
+	@RequestMapping("/getBoard.do")
+	public ModelAndView getBoard(BoardVO vo, BoardDAOJDBC dao, ModelAndView mav) throws Exception {
+		mav.addObject("board", dao.getBoard(vo)); // Model 정보 저장
+		mav.setViewName("/WEB-INF/board/getBoard.jsp");   // View  정보 저장
+		return mav;
+	}
+	
+	// 글 목록 검색
+	@RequestMapping("/getBoardList.do")
+	public ModelAndView getBoardList(BoardVO vo, BoardDAOJDBC dao, ModelAndView mav) throws Exception {
+		mav.addObject("boardList", dao.getBoardList(vo)); // Model 정보 저장
+		mav.setViewName("/WEB-INF/board/getBoardList.jsp");   // View  정보 저장
+		return mav;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

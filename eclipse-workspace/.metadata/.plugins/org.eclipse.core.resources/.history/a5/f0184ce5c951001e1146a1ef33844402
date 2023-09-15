@@ -1,0 +1,7 @@
+package com.multicampus.biz.user;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class UserRowMapper implements RowMapper<T> {
+
+}

@@ -1,0 +1,29 @@
+package com.multicampus.biz.board;
+
+import java.util.Date;
+
+import lombok.Data;
+
+// 1. VO(Value Object) Å¬·¡½º
+@Data
+public class BoardVO {
+	private int seq;
+	private String title;
+	private String writer;
+	private String content;
+	private Date regDate;
+	private int cnt;
+	
+	public void setTitle(String title) {
+		System.out.println("BoardVO(title) : " + title);
+		this.title = title;
+	}
+	public void setWriter(String writer) {
+		System.out.println("BoardVO(writer) : " + writer);
+		this.writer = writer;
+	}
+	public void setContent(String content) {
+		System.out.println("BoardVO(content) : " + content);
+		this.content = content;
+	}
+}

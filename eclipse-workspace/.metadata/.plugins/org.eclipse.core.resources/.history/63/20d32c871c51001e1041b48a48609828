@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<!-- Annotation 기반의 IoC 설정 -->
+	<context:component-scan base-package="com.multicampus.biz"></context:component-scan>
+	
+	<!-- 횡단관심에 해당하는 Advice 클래스를 등록 -->
+	<bean id="log" class="com.multicampus.biz.common.LogAdvice"></bean>
+	<bean id="afterReturning" class="com.multicampus.biz.common.AfterReturningAdvice"></bean>
+	
+	<!-- AOP 설정 -->
+	<aop:config>
+	
+		<aop:pointcut id="allPointcut" expression="execution(* com.multicampus.biz..*Impl.*(..))"/>
+		<aop:pointcut id="getPointcut" expression="execution(* com.multicampus.biz..*Impl.get*(..))"/>
+	
+		<aop:aspect ref="log">
+			<aop:before pointcut-ref="allPointcut" method="printLog"/>
+		</aop:aspect>
+		
+		<aop:aspect ref="afterReturning">
+			<aop:after-returning pointcut-ref="getPointcut" method="afterLog"/>
+		</aop:aspect>
+	
+	</aop:config>
+	
+	<!-- 	
+	<bean id="boardDAO" class="com.multicampus.biz.board.BoardDAO"></bean>
+	
+	<bean id="boardService" class="com.multicampus.biz.board.BoardServiceImpl">
+		<property name="boardDAO" ref="boardDAO"></property>
+	</bean>
+	-->
+</beans>
+
+
+
+
+
+

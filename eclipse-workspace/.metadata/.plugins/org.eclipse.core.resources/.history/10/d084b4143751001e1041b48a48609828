@@ -1,0 +1,45 @@
+package com.multicampus.biz.common;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Service;
+
+import com.multicampus.biz.user.UserVO;
+
+@Service
+@Aspect
+public class AfterReturningAdvice {
+	
+	@Pointcut("execution(* com.multicampus.biz..*Impl.get*(..))")
+	public void getPointcut() {}
+
+	@AfterReturning(pointcut = "allPointcut()", returning = "returnObj")
+	public void afterLog(JoinPoint jp, Object returnObj) {
+		String methodName = jp.getSignature().getName();
+		System.out.println("[사후 처리] " + methodName + "() 메소드 리턴값 : " + returnObj.toString());
+		
+		// 비즈니스 메소드가 리터한 객체가 UserVO 타입의 객체인지 확인한다. 
+		if(returnObj instanceof UserVO) {
+			UserVO user = (UserVO) returnObj;
+			
+			// UserVO 객체의 권한이 "Admin"인지 확인한다. 
+			if(user.getRole().equals("Admin")) {
+				System.out.println(user.getName() + "님! 관리자 전용 페이지로 이동합니다.");
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

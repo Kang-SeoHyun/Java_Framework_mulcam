@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%
+	// 1. Forward 방식
+	RequestDispatcher rd = request.getRequestDispatcher("b.jsp");
+	rd.forward(request, response);
+	
+	// 2. Redirect 방식
+	//response.sendRedirect("b.jsp");
+%>

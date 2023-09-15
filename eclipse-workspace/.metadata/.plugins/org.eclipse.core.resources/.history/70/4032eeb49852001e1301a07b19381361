@@ -1,0 +1,41 @@
+package com.multicampus.controller.board;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+
+import com.multicampus.biz.board.BoardDAOJDBC;
+import com.multicampus.biz.board.BoardVO;
+
+@Controller
+public class InsertBoardController {
+
+	public void 되나(HttpServletRequest request) throws Exception {
+		System.out.println("글 등록 기능 처리");
+
+		// 1. 사용자 입력정보 추출
+		String title = request.getParameter("title");
+		String writer = request.getParameter("writer");
+		String content = request.getParameter("content");
+		
+		// 2. DB 연동 처리
+		BoardVO vo = new BoardVO();
+		vo.setTitle(title);
+		vo.setWriter(writer);
+		vo.setContent(content);
+		
+		BoardDAOJDBC dao = new BoardDAOJDBC();
+		dao.insertBoard(vo);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

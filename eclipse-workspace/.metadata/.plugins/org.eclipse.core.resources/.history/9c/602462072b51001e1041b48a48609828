@@ -1,0 +1,19 @@
+package com.multicampus.biz.common;
+
+import java.sql.SQLException;
+
+public class AfterThrowingAdvice {
+
+	public void exceptionLog(Exception exceptionObj) {
+		System.out.println("[예외 처리] 비즈니스 로직 수행 중 예외 발생!!!");
+		
+		// 발생된 예외의 종류에 따른 분기처리
+		if(exceptionObj instanceof IllegalArgumentException) {
+			System.out.println("0번 글을 등록할 수는 없습니다.");
+		} else if(exceptionObj instanceof SQLException) {
+			System.out.println("SQL 구문에 문법 오류가 발생했습니다.");
+		} else {
+			System.out.println("문제 발생!!!");
+		}
+	}
+}

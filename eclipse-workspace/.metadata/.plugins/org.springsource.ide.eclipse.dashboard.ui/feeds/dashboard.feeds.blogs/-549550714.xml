@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Spring]]></title><description><![CDATA[Level up your Java code and explore what Spring can do for you.]]></description><link>https://spring.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 14 Sep 2023 15:59:24 GMT</lastBuildDate><item><title><![CDATA[Spring Framework 6.1 M5 released]]></title><link>https://spring.io/blog/2023/09/14/spring-framework-6-1-m5-released</link><guid isPermaLink="true">https://spring.io/blog/2023/09/14/spring-framework-6-1-m5-released</guid><dc:creator><![CDATA[Brian Clozel]]></dc:creator><pubDate>Thu, 14 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;On behalf of the Spring Framework team, it is my pleasure to announce that the fifth and final Spring Framework 6.1 milestone release is available from &lt;a href=&quot;https://repo.spring.io/milestone&quot;&gt;repo.spring.io/milestone&lt;/a&gt; now. We initially planned for this release to be the first release candidate, but decided to release another milestone and shorten the release candidate phase.&lt;/p&gt;
+&lt;p&gt;Spring Framework 6.1.0-M5 ships &lt;a href=&quot;https://github.com/spring-projects/spring-framework/milestone/333?closed=1&quot;&gt;99 fixes and improvements&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;New Features&lt;/h2&gt;
+&lt;p&gt;This new milestone ships new interesting features, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for one-time &lt;code&gt;@Scheduled&lt;/code&gt; tasks&lt;/li&gt;
+&lt;li&gt;The new &lt;code&gt;RestClient&lt;/code&gt; has now &lt;a href=&quot;https://docs.spring.io/spring-framework/reference/6.1/integration/rest-clients.html#rest-restclient&quot;&gt;its own section in the reference documentation&lt;/a&gt; and is instrumented for Observability&lt;/li&gt;
+&lt;li&gt;Jetty 12 upgrade&lt;/li&gt;
+&lt;li&gt;Context Propagation support for &lt;code&gt;@Async&lt;/code&gt; and &lt;code&gt;@Scheduled&lt;/code&gt; invocations&lt;/li&gt;
+&lt;li&gt;Declarative &lt;code&gt;ContextCustomizer&lt;/code&gt; support with &lt;code&gt;@ContextCustomizerFactories&lt;/code&gt; in Spring Test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This also ships improvements for all existing applications:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Performance improvements in Spring WebFlux&lt;/li&gt;
+&lt;li&gt;Better error handling in Servlet applications, attempting to reset the response content if possible&lt;/li&gt;
+&lt;li&gt;Many improvements for the Kotlin Coroutine support in web applications&lt;/li&gt;
+&lt;li&gt;Further improvements in the lifecycle of HTTP resources for CRaC support&lt;/li&gt;
+&lt;li&gt;Hibernate footprint optimizations for GraalVM native applications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;What&apos;s next&lt;/h2&gt;
+&lt;p&gt;Check out our &lt;a href=&quot;https://github.com/spring-projects/spring-framework/wiki/What&amp;#x27;s-New-in-Spring-Framework-6.x&quot;&gt;What&apos;s New page&lt;/a&gt; for details about the specific features shipped so far.&lt;/p&gt;
+&lt;p&gt;The third Spring Boot 3.2 milestone &lt;a href=&quot;https://calendar.spring.io/&quot;&gt;will be released next week&lt;/a&gt;. This is a good opportunity to test existing applications with it and report any wrinkle in the upgrade process.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spring Framework 5.3.30 and 6.0.12 available now]]></title><link>https://spring.io/blog/2023/09/14/spring-framework-5-3-30-and-6-0-12-available-now</link><guid isPermaLink="true">https://spring.io/blog/2023/09/14/spring-framework-5-3-30-and-6-0-12-available-now</guid><dc:creator><![CDATA[Brian Clozel]]></dc:creator><pubDate>Thu, 14 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Framework &lt;code&gt;5.3.30&lt;/code&gt; and &lt;code&gt;6.0.12&lt;/code&gt; are available now.&lt;/p&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;5.3.30&lt;/code&gt; ships with &lt;a href=&quot;https://github.com/spring-projects/spring-framework/releases/tag/v5.3.30&quot;&gt;20 fixes and documentation improvements&lt;/a&gt;, including &lt;a href=&quot;https://github.com/spring-projects/spring-framework/issues?q=is%3Aclosed+milestone%3A5.3.30+label%3A%22type%3A+regression%22&quot;&gt;5 fixes for regressions&lt;/a&gt;. This version will be shipped with Spring Boot 2.7.16, &lt;a href=&quot;https://calendar.spring.io/&quot;&gt;to be released next week&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;6.0.12&lt;/code&gt; ships with &lt;a href=&quot;https://github.com/spring-projects/spring-framework/releases/tag/v6.0.12&quot;&gt;75 fixes and documentation improvements&lt;/a&gt;, including &lt;a href=&quot;https://github.com/spring-projects/spring-framework/issues?q=is%3Aclosed+milestone%3A6.0.12+label%3A%22type%3A+regression%22&quot;&gt;7 fixes for regressions&lt;/a&gt;. This version will be shipped with Spring Boot 3.0.11 and 3.1.4, &lt;a href=&quot;https://calendar.spring.io/&quot;&gt;to be released next week&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We expect the next set of Spring Framework maintenance releases to ship next November, along with the new and exciting 6.1.0 we have been working on the last few months.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://spring.io/projects/spring-framework/&quot;&gt;Project Page&lt;/a&gt; | &lt;a href=&quot;https://github.com/spring-projects/spring-framework&quot;&gt;GitHub&lt;/a&gt; | &lt;a href=&quot;https://github.com/spring-projects/spring-framework/issues&quot;&gt;Issues&lt;/a&gt; | &lt;a href=&quot;https://docs.spring.io/spring-framework/reference/&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spring Tools 4.20.0 released]]></title><link>https://spring.io/blog/2023/09/13/spring-tools-4-20-0-released</link><guid isPermaLink="true">https://spring.io/blog/2023/09/13/spring-tools-4-20-0-released</guid><dc:creator><![CDATA[Martin Lippert]]></dc:creator><pubDate>Wed, 13 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+&lt;p&gt;I am happy to announce the 4.20.0 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Theia.&lt;/p&gt;
+&lt;h4&gt;updates to the Spring Tools 4 for Eclipse distribution&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;updated to Eclipse 2023-09 release (&lt;a href=&quot;https://eclipseide.org/release/noteworthy/&quot;&gt;new and noteworthy&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;important highlights&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;(Spring Boot):&lt;/em&gt; 5x-10x faster Java Reconciling support to show Spring specific validations re-built from the ground up tuned for high performance to work seamlessly in large code bases&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(Eclipse):&lt;/em&gt; No more rogue &quot;Boot Language Server&quot; jobs, forever calculating completion proposals and other stuck Java/Spring tooling features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;more fixes and improvements&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: Performance of Reconciling Spring Java (&lt;a href=&quot;https://github.com/spring-projects/sts4/issues/1068&quot;&gt;#1068&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: Spring Language Server hangs forever (&lt;a href=&quot;https://github.com/spring-projects/sts4/issues/1075&quot;&gt;#1075&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: Spring Boot Validations Builder hung seemingly forever (&lt;a href=&quot;https://github.com/spring-projects/sts4/issues/1103&quot;&gt;#1103&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: Incorrect MISSING_CONFIGURATION_ANNOTATION warning in vscode (&lt;a href=&quot;https://github.com/spring-projects/sts4/issues/1100&quot;&gt;#1100&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Detailed changes can be found in the release notes: &lt;a href=&quot;https://github.com/spring-projects/sts4/releases/tag/4.20.0.RELEASE&quot;&gt;https://github.com/spring-projects/sts4/releases/tag/4.20.0.RELEASE&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;downloads&lt;/h4&gt;
+&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Theia, please go visit:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring Tools 4: &lt;a href=&quot;https://spring.io/tools/&quot;&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Spring Tools 4.20.1 is scheduled to be released in late October 2023.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[This Week in Spring - September 12th, 2023  ]]></title><link>https://spring.io/blog/2023/09/12/this-week-in-spring-september-12th-2023</link><guid isPermaLink="true">https://spring.io/blog/2023/09/12/this-week-in-spring-september-12th-2023</guid><dc:creator><![CDATA[Josh Long]]></dc:creator><pubDate>Tue, 12 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! How are you this fine 12th of September?
+I&apos;m doing alright, elated, even. I&apos;ve just returned from beautiful Oslo, Norway, and I&apos;ve got a busy 30 days or so ahead, starting today. I&apos;m visiting Seattle, WA;  Mexico City, Mexico;  Dallas, TX;  Singapore (SpringOne Singapore); Antwerp, Belgium (Devoxx BE!);  London, United Kingdom; Amsterdam, Netherlands; and (maybe) parts of Germany. Keep an eye on my &lt;a href=&quot;https://x.com/starbuxman&quot;&gt;socials&lt;/a&gt; and &lt;a href=&quot;https://youtube.com/@coffesoftware&quot;&gt;videos&lt;/a&gt; for details as those dates and duties become clearer. Anyway, we&apos;ve got a ton to look into this week, so let&apos;s dive right into it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=1g_wuincUdU&quot;&gt;Introducing Spring AI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Another solid video from &lt;em&gt;Spring In Action&lt;/em&gt; legend Craig Walls: &lt;a href=&quot;https://www.youtube.com/watch?v=zNIiLkRn96Q&quot;&gt;Spring AI and Embeddings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://spring.io/blog/2023/09/07/a-bootiful-podcast-spring-security-lead-rob-winch&quot;&gt;A Bootiful Podcast: Spring Security lead Rob Winch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://spring.io/blog/2023/09/09/all-together-now-spring-boot-3-2-graalvm-native-images-java-21-and-virtual&quot;&gt;All together now: Spring Boot 3.2, GraalVM native images, Java 21, and virtual threads with Project Loom,&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/@SpringSourceDev/videos&quot;&gt;all the SpringOne 2023 videos are now live&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;I love the possibilities of Java&apos;s &lt;a href=&quot;https://www.youtube.com/watch?v=lnth19Kf-x0&quot;&gt;Project Leyden - Capturing Lightning in a Bottle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://spring.io/blog/2023/09/11/spring-boot-2-7-commercial-support-extension&quot;&gt;Spring Commercial Support Extension&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/deno-the-complete-reference/springboot-virtual-threads-vs-webflux-performance-comparison-for-jwt-verify-and-mysql-query-ff94cf251c2c&quot;&gt;SpringBoot virtual threads vs webflux: Performance comparison for JWT verify and MySQL query&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://spectrum.ieee.org/the-top-programming-languages-2023&quot;&gt;The Top Programming Languages 2023 - IEEE Spectrum&lt;/a&gt; - the rumours of Java&apos;s demise are &lt;em&gt;greatly&lt;/em&gt; exxagerated.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://x.com/sdeleuze/status/1699733297801175043&quot;&gt;Spring legend Sebastien Deleuze&lt;/a&gt; says: &quot;I have worked on several improvements in  Spring Framework 6.1 that will bring Kotlin Coroutines support to the next level: Spring AOP support, propagation in functional or annotation-based filters, new context DSL. Feedback appreciated!&quot;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kubernetes.io/blog/2023/09/12/local-k8s-development-tools/&quot;&gt;Blog: Comparing Local Kubernetes Development Tools: Telepresence, Gefyra, and mirrord&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Spring Commercial Support Extension]]></title><link>https://spring.io/blog/2023/09/11/spring-boot-2-7-commercial-support-extension</link><guid isPermaLink="true">https://spring.io/blog/2023/09/11/spring-boot-2-7-commercial-support-extension</guid><dc:creator><![CDATA[Michael Minella]]></dc:creator><pubDate>Mon, 11 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In November of last year, the team released major versions across the Spring portfolio, shepherding in a new foundation for enterprise application development on the JVM for the next decade. With that round of major versions, the Java baseline for the projects was increased from Java 8 to Java 17 as well as the migration from Java EE to Jakarta EE. Beyond the new baseline, we introduced new native compilation capabilities via GraalVM as well as improved observability across the portfolio. We realize that, while we put a lot of work into making the upgrade as seamless as we possibly can within our Spring components, Java upgrades and other aspects of this upgrade can be a challenge.&lt;/p&gt;
+&lt;p&gt;A couple weeks ago, we heard from Netflix at SpringOne @ VMware Explore on how they have approached this upgrade. During their talk &lt;a href=&quot;https://www.youtube.com/watch?v=IMGcD08rdVw&quot;&gt;&quot;How Netflix is Upgrading to Spring Boot 3&quot;&lt;/a&gt;, they discussed both the challenges they have faced as well as the benefits they have seen, including an increase in performance by just upgrading Spring Boot and the JDK of up to 15%, which translates into real savings on their infrastructure spend.&lt;/p&gt;
+&lt;p&gt;We realize that these asks, while necessary for the ecosystem to stay current, require more time to handle in many enterprises than users would like. Because of that, we are announcing that we have extended the end of commercial support timeline for supported projects associated with the Spring Boot 2.7.x line from February of 2025 to August of 2025. This extra six months of commercial support is intended to give our community the opportunity to upgrade and take advantage of these new features on your timeline and not ours. Specific support dates for each project can be found on the Support tab on each project page (for example: &lt;a href=&quot;https://spring.io/projects/spring-boot#support&quot; title=&quot;Spring Boot Support Timeline&quot;&gt;Spring Boot&lt;/a&gt; ). We also encourage you to check out details on our support offering as well as other ways we can help with the upgrade in &lt;a href=&quot;https://spring.io/solutions&quot; title=&quot;Spring Solutions&quot;&gt;Solutions&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[All together now: Spring Boot 3.2, GraalVM native images, Java 21, and virtual threads with Project Loom, ]]></title><link>https://spring.io/blog/2023/09/09/all-together-now-spring-boot-3-2-graalvm-native-images-java-21-and-virtual</link><guid isPermaLink="true">https://spring.io/blog/2023/09/09/all-together-now-spring-boot-3-2-graalvm-native-images-java-21-and-virtual</guid><dc:creator><![CDATA[Josh Long]]></dc:creator><pubDate>Sat, 09 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This has been a very long time in coming, but finally we can create GraalVM native images that use Spring Boot (via Spring Boot 3.2) and Java 21&apos;s virtual threads (Project Loom)!&lt;/p&gt;
+&lt;p&gt;Why does all this matter? Each of these individual things, Project Loom, and GraalVM native images, offer compelling runtime characteristics. I&apos;ve waited so very long for these to converge! Let&apos;s talk about them each in turn.&lt;/p&gt;
+&lt;h2&gt;GraalVM Native Images&lt;/h2&gt;
+&lt;p&gt;GraalVM is an OpenJDk distribution that provides some extra utilities, including a utility called &lt;code&gt;native-image&lt;/code&gt; that does ahead-of-time (AOT) compilation on your code. We&apos;re not going to get into all of its utility here, but basically it takes your code, throws away stuff that you don&apos;t need, and then compiles the rest into blazing-fast, operating-system and architecture specific native code. The results are breathtaking, akin to what you&apos;d get if you compiled a C or Go program, for example. The resulting binaries start up in no time at all and take a lot less RAM at runtime. Imagine being able to deploy an existing Spring Boot application and have it take tens, not hundreds, of megabytes of RAM and startup in a few hundred milliseconds. Now you can. Just run &lt;code&gt;./gradlew nativeCompile&lt;/code&gt; or &lt;code&gt;./mvnw -Pnative native:compile&lt;/code&gt; and stand back. Spring Boot has supported GraalVM native images in production since Spring Boot 3.0 came out in November of 2022.&lt;/p&gt;
+&lt;h2&gt;Project Loom&lt;/h2&gt;
+&lt;p&gt;Project Loom brings transparent fibers to the JVM. As things stand today, in Java 20 or earlier, IO is &lt;em&gt;blocking&lt;/em&gt;. Call &lt;code&gt;int InputStream#read()&lt;/code&gt; and you might have to wait for the next byte to finally arrive. In &lt;code&gt;java.io.File&lt;/code&gt; IO, there&apos;s very rarely much of a delay. On the network, however, you just don&apos;t really ever know. Clients might disconnect. Clients might be going through a tunnel. Again, it&apos;s just very hard to say. During this time, the program flow is said to be &lt;em&gt;blocked&lt;/em&gt; from proceeding on the thread of execution. In the following snippet, we have no way of knowing when we&apos;ll see the word &lt;code&gt;after&lt;/code&gt; printed. Might be a nanosecond from now. Might be a week from now. It&apos;s &lt;em&gt;blocking&lt;/em&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;InputStream in = ... 
+System.out.println(&quot;before&quot;);
+int next = in.read(); 
+System.out.println(&quot;after&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is bad enough, but it&apos;s made worse by the current architecture of threading in Java prior to Java 21. Presently, each thread maps, more or less, to a native operating system thread. It&apos;s expensive to create more threads, too, taking about two megabytes of RAM.&lt;/p&gt;
+&lt;p&gt;There are ways around this, of course. You could use non-blocking IO, as enabled by Java NIO (&lt;code&gt;java.nio.\*&lt;/code&gt;). In this model, you ask for bytes and register a callback that executes only when there are actually bytes available. No waiting, no blocking. This approach has the significant benefit of keeping us off threads when there&apos;s nothing to be done, allowing others to use those threads in the meantime. It&apos;s a bit tedious, however, and low-level. Spring has amazing support for reactive programming, which offers a functional-style programming model on top of non-blocking IO. It works well. But, it requires changing the way you write code. Wouldn&apos;t it be nice if you could just take that existing code, as demonstrated above, and have it do the right thing, transparently moving the flow of execution off the thread when there&apos;s nothing happening, and then resuming the flow of execution when there is? Absolutely it would. That&apos;s the promise of Project Loom. Take the code above, and make sure you execute it in a &lt;em&gt;virtual&lt;/em&gt; thread (easy enough, you can use &lt;code&gt;ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()&lt;/code&gt;), and &lt;em&gt;it just works&lt;/em&gt;!&lt;/p&gt;
+&lt;h2&gt;Spring Boot 3.2&lt;/h2&gt;
+&lt;p&gt;Your typical Spring Boot application uses thread pools (&lt;code&gt;Executor&lt;/code&gt; and &lt;code&gt;ExecutorService&lt;/code&gt; instances) all over the place! In your web services, in your messaging logic, etc. And now, in the new Spring Boot 3.2 milestones (the final release is due November 2023), you can have Spring Boot use virtual executors, with only a single, simple, property: &lt;code&gt;spring.threads.virtual.enabled=true&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;All Together Now&lt;/h2&gt;
+&lt;p&gt;Bear in mind: Spring Boot 3.2 is not yet GA. Java 21 is not yet GA. GraalVM supporting Java 21 is not GA. Things are a bit rough, but I&apos;ve been yearning to try everything all together: a GraalVM native image, with virtual threads, in a Spring Boot application. When everything looked like it was in place to try, I found a small bug in the &lt;a href=&quot;https://twitter.com/fniephaus/status/1699344224523518060&quot;&gt;GraalVM compiler to overcome&lt;/a&gt;!  Nothing the fantastic GraalVM team couldn&apos;t handle, of course, but as I said: things are a little &lt;em&gt;rough&lt;/em&gt;. Worth it, though! Let&apos;s get all the pieces in place so you can try it out.&lt;/p&gt;
+&lt;h3&gt;Installing GraalVM for Java 21&lt;/h3&gt;
+&lt;p&gt;First, we need to install GraalVM and Java 21. I&apos;m on a Mac with the Apple Silicon / ARM architecture, so I chose &lt;code&gt;graalvm-community-java21-darwin-aarch64-dev.tar.gz&lt;/code&gt; from  &lt;a href=&quot;https://github.com/graalvm/graalvm-ce-dev-builds/releases/tag/24.0.0-dev-20230907_0337&quot;&gt;the latest release (as of this writing)&lt;/a&gt;.  You could just download and unzip it, being sure to configure key environment variables like &lt;code&gt;JAVA_HOME&lt;/code&gt; and &lt;code&gt;PATH&lt;/code&gt; correctly. I&apos;m a fan of the &lt;a href=&quot;https://sdkman.io&quot;&gt;SDKMan project&lt;/a&gt;, so I wanted to use it to manage this newly downloaded release. I unzipped the &lt;code&gt;.tar.gz&lt;/code&gt; to a folder called - &lt;code&gt;~/bin/graalvm-community-openjdk-21/&lt;/code&gt;, and then ran the following command.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;sdk install java graalvm-ce-21 $HOME/bin/graalvm-community-openjdk-21/Contents/Home
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, to make sure it&apos;s available for everything:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;sdk default java graalvm-ce-21
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Open up a new shell and confirm it&apos;s worked:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;&gt; native-image --version 
+native-image 21 2023-09-19
+GraalVM Runtime Environment GraalVM CE 21-dev+35.1 (build 21+35-jvmci-23.1-b14)
+Substrate VM GraalVM CE 21-dev+35.1 (build 21+35, serial gc)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Configuring a Spring Boot project to use Java 21&lt;/h3&gt;
+&lt;p&gt;Go to the &lt;a href=&quot;https://start.spring.io&quot;&gt;Spring Initializr (start.spring.io)&lt;/a&gt;, specify version &lt;code&gt;3.2.0 (M2)&lt;/code&gt; (or later, obviously), add &lt;code&gt;GraalVM&lt;/code&gt; and &lt;code&gt;Web&lt;/code&gt;, and then download the  archive, open it, and load it into your IDE.  We still need to configure the build to work with Java 21. This isn&apos;t ideal, yet, as Gradle doesn&apos;t really know about Java 21. But it will work. Basically. My prowess with Gradle is basically non-existent, but this configuration seems to work:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-gradle&quot;&gt;plugins {
+    id &apos;java&apos;
+    id &apos;org.springframework.boot&apos; version &apos;3.2.0-M2&apos;
+    id &apos;io.spring.dependency-management&apos; version &apos;1.1.3&apos;
+    id &apos;org.graalvm.buildtools.native&apos; version &apos;0.9.24&apos;
+}
+
+group = &apos;com.example&apos;
+version = &apos;0.0.1-SNAPSHOT&apos;
+
+java {
+    sourceCompatibility = &apos;21&apos;
+}
+
+graalvmNative {
+
+    binaries {
+        main {
+            buildArgs.add(&apos;--enable-preview&apos;)
+        }
+    }
+}
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+repositories {
+    mavenCentral()
+    maven { url &apos;https://repo.spring.io/snapshot&apos; }
+    maven { url &apos;https://repo.spring.io/milestone&apos; }
+}
+
+dependencies {
+    implementation &apos;org.springframework.boot:spring-boot-starter-web&apos;
+    testImplementation &apos;org.springframework.boot:spring-boot-starter-test&apos;
+}
+
+tasks.named(&apos;test&apos;) {
+    useJUnitPlatform()
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Re-import that into build configuration into your IDE.&lt;/p&gt;
+&lt;p&gt;Add the following property to &lt;code&gt;application.properties&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-properties&quot;&gt;spring.threads.virtual.enabled=true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And then change your &lt;code&gt;main(String[] args)&lt;/code&gt; class to look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Collection;
+import java.util.Set;
+
+@SpringBootApplication
+public class DemoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+
+}
+
+@RestController
+class CustomersHttpController { 
+
+    @GetMapping(&quot;/customers&quot;)
+    Collection&amp;#x3C;Customer&gt; customers() {
+        return Set.of(new Customer(1, &quot;A&quot;), new Customer(2, &quot;B&quot;), new Customer(3, &quot;C&quot;));
+    }
+
+    record Customer(Integer id, String name) {
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can run the program as usual: &lt;code&gt;./gradlew bootRun&lt;/code&gt;. And it&apos;s using Project Loom! But for the real fun stuff: let&apos;s build a GraalVM native image! &lt;code&gt;./gradlew nativeCompile&lt;/code&gt;. This might take a minute or two..&lt;/p&gt;
+&lt;p&gt;Once it&apos;s done, you can run the native binary in the &lt;code&gt;build&lt;/code&gt; directory: &lt;code&gt;./build/native/nativeCompile/demo&lt;/code&gt;. Now we&apos;re cookin&apos; with gas!&lt;/p&gt;
+&lt;p&gt;We&apos;re basically at the finish line for this litle adventure, but let me just remind you - &lt;em&gt;one more time&lt;/em&gt; - this is still not yet GA software! It will be by the end of  November 2023, if everything goes to plan, but it&apos;s not yet. That&apos;s why getting this blog out is so valuable for me: I want you to try things out. Even Project Loom, which will land in part in Java 21, due in less than two weeks - on September 19th, 2023 - is not strictly speaking &lt;em&gt;all done&lt;/em&gt;. We&apos;ll get part of it in this release, but there are two other columns of the support that you can try out today as preview featues, and if you find something, it&apos;s worth feeding that information back into the process so that these issues can be stamped out now, not later. After all, I just found a bug in the GraalVM compiler not two weeks ago! So, go try things out. It has never been a better time to be a Java developer. And these two things - Loom and GraalVM - are like free money.  Implemented successfully, you&apos;ll get better runtime scalability, energy efficiency, startup time, RAM consumption, and more, in your Spring Boot workloads. Upgrade, try things out. I&apos;ll bet you&apos;ll love it.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A Bootiful Podcast:  Spring Security lead Rob Winch]]></title><link>https://spring.io/blog/2023/09/07/a-bootiful-podcast-spring-security-lead-rob-winch</link><guid isPermaLink="true">https://spring.io/blog/2023/09/07/a-bootiful-podcast-spring-security-lead-rob-winch</guid><dc:creator><![CDATA[Josh Long]]></dc:creator><pubDate>Thu, 07 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hi, Spring fans! Welcome to another installment of a Bootiful Podcast. In this interview, &lt;a href=&quot;https://twitter.com/starbuxman&quot;&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Spring Security legend and lead &lt;a href=&quot;https://twitter.com/ro_winch&quot;&gt;Rob Winch (@rob_winch)&lt;/a&gt;, recorded live from SpringOne 2023!&lt;/p&gt;
+&lt;iframe title=&quot;Spring Security lead Rob Winch&quot; allowtransparency=&quot;true&quot; height=&quot;150&quot; width=&quot;100%&quot; style=&quot;border: none; min-width: min(100%, 430px);height:150px;&quot; scrolling=&quot;no&quot; data-name=&quot;pb-iframe-player&quot; src=&quot;https://www.podbean.com/player-v2/?i=v966g-149ca7c-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[This Week in Spring - September 5th, 2023 ]]></title><link>https://spring.io/blog/2023/09/05/this-week-in-spring-september-5th-2023</link><guid isPermaLink="true">https://spring.io/blog/2023/09/05/this-week-in-spring-september-5th-2023</guid><dc:creator><![CDATA[Josh Long]]></dc:creator><pubDate>Tue, 05 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! How are you? I just got back from another fabulous labor day weekend, and am headed to Oslo, Norway, for the fabulous JavaZone 2023 event. This will be my first time returning to lovely Oslo, Norway, since the pandemic! I can&apos;t wait! If you&apos;re there, don&apos;t hesitate to say &quot;hey&quot;!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://spring.io/blog/2023/08/29/spring-data-jdbc-how-to-maintain-your-database-schema&quot;&gt;Spring Data JDBC - How To Maintain Your Database Schema&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;I really like the Spring Cloud Alibaba&apos;s project&apos;s landing page: &lt;a href=&quot;https://sca.aliyun.com/en-us/&quot;&gt;SpringCloudAlibaba&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/pulse/java-landscape-month-vaadin-openjdk-insights-a-n-m-bazlur-rahman/?trackingId=iW33LATaTISNALBBClnyXg%253D%253D&quot;&gt;The Java Landscape: A Month with Vaadin, OpenJDK Insights, and Java Enhancements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://spring.io/blog/2023/08/31/this-is-the-beginning-of-the-end-of-the-n-1-problem-introducing-single-query&quot;&gt;This is the Beginning of the End of the N 1 Problem: Introducing Single Query Loading.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a ton of the videos from the talks at &lt;a href=&quot;https://www.vmware.com/explore/video-library/video-landing.html?sessionid=1679423614489001WJoh&amp;#x26;videoId=6335504006112&quot;&gt;SpringOne @ VMware Explore&lt;/a&gt; are already available and accessible now. Here&apos;s a link, for example, to my not terrible Bootiful  talk&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kubernetes.io/blog/2023/08/28/kubernetes-1-28-feature-mixed-version-proxy-alpha/&quot;&gt;Blog: Kubernetes 1.28: A New (alpha) Mechanism For Safer Cluster Upgrades&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kubernetes.io/blog/2023/08/31/legacy-package-repository-deprecation/&quot;&gt;Blog: Kubernetes Legacy Package Repositories Will Be Frozen On September 13, 2023&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=pVdDWQQeqME&quot;&gt;How to Monitor Spring Boot Application With Prometheus and Grafana&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://piotrminkowski.com/2023/08/29/introduction-to-grpc-with-spring-boot/&quot;&gt;Introduction to gRPC with Spring Boot - Piotr&apos;s TechBlog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[A Bootiful Podcast: Spring Security and Kubernetes legend Daniel Garnier-Moiroux ]]></title><link>https://spring.io/blog/2023/08/31/a-bootiful-podcast-spring-security-and-kubernetes-legend-daniel-garnier</link><guid isPermaLink="true">https://spring.io/blog/2023/08/31/a-bootiful-podcast-spring-security-and-kubernetes-legend-daniel-garnier</guid><dc:creator><![CDATA[Josh Long]]></dc:creator><pubDate>Thu, 31 Aug 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hi, Spring fans! In this installment Josh Long talks to Spring contributor and adjunct professor at Mines Paris, &lt;a href=&quot;https://twitter.com/kehrlann&quot;&gt;Daniel Garnier-Moiroux (@kehrlann)&lt;/a&gt;, about the wild and wonderful intersection of all things Spring Security and Kubernetes, productized Spring Cloud Services, and more, recorded live at SpringOne 2023 from Las Vegas, Nevada!&lt;/p&gt;
+&lt;iframe title=&quot;Spring Security and Kubernetes legend Daniel Garnier-Moiroux &quot; allowtransparency=&quot;true&quot; height=&quot;150&quot; width=&quot;100%&quot; style=&quot;border: none; min-width: min(100%, 430px);height:150px;&quot; scrolling=&quot;no&quot; data-name=&quot;pb-iframe-player&quot; src=&quot;https://www.podbean.com/player-v2/?i=t4a7j-1494966-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[This is the Beginning of the End of the N+1 Problem: Introducing Single Query Loading.]]></title><link>https://spring.io/blog/2023/08/31/this-is-the-beginning-of-the-end-of-the-n-1-problem-introducing-single-query</link><guid isPermaLink="true">https://spring.io/blog/2023/08/31/this-is-the-beginning-of-the-end-of-the-n-1-problem-introducing-single-query</guid><dc:creator><![CDATA[Jens Schauder]]></dc:creator><pubDate>Thu, 31 Aug 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;TL;DR:&lt;/h2&gt;
+&lt;p&gt;Starting with Spring Data JDBC 3.2.0-M2, Spring Data JDBC supports &lt;em&gt;Single Query Loading&lt;/em&gt;.
+Single Query Loading loads arbitrary aggregates with a single select statement.&lt;/p&gt;
+&lt;p&gt;To enable Single Query Loading you need to call &lt;code&gt;setSingleQueryLoadingEnabled(true)&lt;/code&gt; on your &lt;a href=&quot;https://docs.spring.io/spring-data/jdbc/docs/current/api/org/springframework/data/relational/core/mapping/RelationalMappingContext.html&quot;&gt;&lt;code&gt;RelationalMappingContext&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In 3.2.0-M2, this works only for simple aggregates, consisting of an aggregate root and a single collection of other entities.
+It is also limited to the &lt;code&gt;findAll&lt;/code&gt;, &lt;code&gt;findById&lt;/code&gt;, and &lt;code&gt;findAllByIds&lt;/code&gt; methods in &lt;code&gt;CrudRepository&lt;/code&gt;.
+&lt;a href=&quot;https://github.com/spring-projects/spring-data-relational/issues/1445&quot;&gt;Future versions will improve on that&lt;/a&gt;.
+A final limitation is that the database you use has to support &lt;a href=&quot;https://www.sqltutorial.org/sql-window-functions/&quot;&gt;analytic functions (AKA window functions)&lt;/a&gt;.
+All the officially supported databases except for the in memory databases (H2 and Hsql DB) do so.&lt;/p&gt;
+&lt;p&gt;You can abbreviate Single Query Loading as &lt;em&gt;SQL&lt;/em&gt;, but please, don&apos;t.&lt;/p&gt;
+&lt;p&gt;If you want to understand how it does work, and a little of how we came up with it, read on.&lt;/p&gt;
+&lt;h2&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;Conceptually Spring Data JDBC loads complete aggregates in one go.
+So far, though, if you looked at what SQL actually gets run, you realize that, for non-trivial aggregates, multiple SQL statements get run.
+Consider, for example, the type of &lt;code&gt;Minion&lt;/code&gt; that references a collection of &lt;code&gt;Hobby&lt;/code&gt; and a collection of &lt;code&gt;Toy&lt;/code&gt; entities.
+When Spring Data JDBC loads a bunch of such minions it:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run a &lt;code&gt;SELECT ... FROM MINION&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;For each result in that query, it:&lt;/li&gt;
+&lt;li&gt;Run a &lt;code&gt;SELECT ... FROM HOBBY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run a &lt;code&gt;SELECT ... FROM TOY&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This is inefficient and known as the N+1 problem, since, for an aggregate with a single collection to load N aggregates, N+1 queries get executed
+(one for the root and N for the child entities).
+If there is only a single collection, you may do a join, but that falls apart when there are multiple collections.&lt;/p&gt;
+&lt;p&gt;This problem is by no means specific to Spring Data JDBC.
+Other ORMs use different strategies to minimize this problem.
+For example, they may join one child entity to the aggregate root.
+Alternately, they may use batch loading for related entities.
+All these approaches limit the effect of the problem, but they merely treat symptoms.
+Also, most people will actually tell you that you can&apos;t really do this in a single query, since you will get a cross product of all the child tables, which can be very bad.
+Imagine 5 child tables with 10 entries per minion.
+The cross product of these will be 10&lt;em&gt;10&lt;/em&gt;10&lt;em&gt;10&lt;/em&gt;10 = 10000 rows!&lt;/p&gt;
+&lt;h2&gt;The Idea&lt;/h2&gt;
+&lt;p&gt;Quite some time ago, I remembered something &lt;a href=&quot;https://www.linkedin.com/in/frank-gerberding/&quot;&gt;Frank Gerberding&lt;/a&gt;, a former coworker of mine said:
+&quot;The problem with relational databases is that they always return tables, and sometimes you need a tree.&quot;
+Well he said it in German, and I don&apos;t remember his exact words, but that was the gist of it.
+This got me thinking: It&apos;s true, a SQL query will always return basically a table.
+But how would I represent a tree in there?
+To put it differently: How would you represent the data of an aggregate in Excel?
+What if you ignore the fact that Excel is basically a relational database with super powers and just treat it as a single spread sheet?&lt;/p&gt;
+&lt;p&gt;Let&apos;s start with a fairly simple case.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;class Minion {
+    @Id
+    Long id;
+    String name;
+    List&amp;#x3C;Toy&gt; toys;
+    // the skills you need to excel at this hobby.
+    List&amp;#x3C;Hobby&gt; hobbies;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;Toy&lt;/code&gt; and &lt;code&gt;Hobby&lt;/code&gt; just have a &lt;code&gt;name&lt;/code&gt; property for now.&lt;/p&gt;
+&lt;p&gt;If I want to represent this in Excel, I&apos;d probably do something like this:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Minion id&lt;/th&gt;
+&lt;th&gt;Minion name&lt;/th&gt;
+&lt;th&gt;toys name&lt;/th&gt;
+&lt;th&gt;hobbies name&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Teddy&lt;/td&gt;
+&lt;td&gt;Hold Teddy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Blue Light&lt;/td&gt;
+&lt;td&gt;Look Cute&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Follow Kevin&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Kevin&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Getting a result like this back from a query would be really nice.
+It would be not to difficult to construct Java instances from that with a single pass over the &lt;code&gt;ResultSet&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;At this point I remembered that SQL is actually Turing-complete.
+Therefore, I can express this in SQL. It is just a question of how!
+It always helps to know there is a solution for a problem.
+When you can shut the voice in your head down that otherwise tries to convince you that there isn&apos;t a solution and you are just wasting your time, finding the solution becomes much easier.&lt;/p&gt;
+&lt;h2&gt;Row Numbers&lt;/h2&gt;
+&lt;p&gt;The elements of the collections are kind of &quot;joined&quot; by the index of the row within a &lt;code&gt;Minion&lt;/code&gt;.
+But that index does not exist in the database.
+Luckily, you can create such an index fairly easily using the &lt;code&gt;row_number()&lt;/code&gt; window function.&lt;/p&gt;
+&lt;p&gt;If you don&apos;t know about &lt;a href=&quot;https://www.sqltutorial.org/sql-window-functions/&quot;&gt;window functions (AKA analytic functions)&lt;/a&gt;, they are similar to aggregate functions, but the &lt;code&gt;group by&lt;/code&gt; doesn&apos;t collapse all matching rows into one.
+Instead, the analytic function gets applied to the &lt;em&gt;window&lt;/em&gt; defined by the &lt;code&gt;group by&lt;/code&gt; and the result is available in each row.
+And it doesn&apos;t always have to be the same result for all rows in a group.
+There is a lot more you can do with these functions.
+&lt;a href=&quot;https://www.sqltutorial.org/sql-window-functions/&quot;&gt;You should read more about it&lt;/a&gt;.
+But for our current problem at hand we need only:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;row_number()&lt;/code&gt;, which assigns a unique, continuously increasing numbers to all rows in a group.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;count(*)&lt;/code&gt;, which counts the number of rows in a group.
+I know, surprising.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We start by creating with a subselect for each child table.
+Each subselect selects all columns from the underlying table, a &lt;code&gt;row_number()&lt;/code&gt; and the &lt;code&gt;count(*)&lt;/code&gt;, each grouped by the &lt;code&gt;minion_id&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;( 
+  select *,
+    row_number() over (partition by minion_id) h_rn,
+    count(*) over (partition by minion_id) h_cnt
+  from hobby
+) h
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We actually do the same for the aggregate root.
+However, we don&apos;t need a &lt;code&gt;row_number&lt;/code&gt;, since we know that there is only one minion per row. Therefore, we can fix that to 1.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;( 
+  select *,
+    1 m_rn
+  from minion
+) m
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Join by Id&lt;/h2&gt;
+&lt;p&gt;Next we join all these subselects together, with a standard left join:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;select *
+from ( ... ) m
+left join 
+  ( ... ) h
+  on m.id = h.minion_id
+left join 
+  ( ... ) t
+  on m.id = t.minion_id
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This gives exactly the cross product that I declared unacceptable above.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Minion id&lt;/th&gt;
+&lt;th&gt;m_rn&lt;/th&gt;
+&lt;th&gt;Minion name&lt;/th&gt;
+&lt;th&gt;toys name&lt;/th&gt;
+&lt;th&gt;t_rn&lt;/th&gt;
+&lt;th&gt;hobbies name&lt;/th&gt;
+&lt;th&gt;h_rn&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Teddy&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Hold Teddy&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Blue Light&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Hold Teddy&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Teddy&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Look Cute&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Blue Light&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Look Cute&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Teddy&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Follow Kevin&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Blue Light&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Follow Kevin&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Kevin&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;What we want instead is similar to a &lt;a href=&quot;https://www.w3schools.com/sql/sql_join_full.asp&quot;&gt;&lt;code&gt;full outer join&lt;/code&gt;&lt;/a&gt; on the different row numbers.
+Unfortunately, you can&apos;t have a &lt;code&gt;left join&lt;/code&gt; on one column and a &lt;code&gt;full outer join&lt;/code&gt; on another column in SQL.
+But we can solve this with a where clause.&lt;/p&gt;
+&lt;h2&gt;Pseudo Full Outer Join on Row Numbers&lt;/h2&gt;
+&lt;p&gt;The naive version of that where clause would be:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;where m_rn = h_rn
+and   m_rn = t_rn
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This ignores the fact that we need the outer join semantics.
+To fix that, a lot of &lt;code&gt;is null&lt;/code&gt; checks and comparisons with the &lt;code&gt;cnt&lt;/code&gt; columns are added, making the where clause rather hard to read.
+And it is also sufficiently complicated that I&apos;m not able to write it down without probably making a ton of mistakes.
+I therefore spare you the details.
+Go ahead and enable SQL logging, if you really have to know.&lt;/p&gt;
+&lt;p&gt;With this we have the number of rows down to the correct number.
+Great!
+But we are still duplicating parts of the data.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Minion id&lt;/th&gt;
+&lt;th&gt;m_rn&lt;/th&gt;
+&lt;th&gt;Minion name&lt;/th&gt;
+&lt;th&gt;toys name&lt;/th&gt;
+&lt;th&gt;t_rn&lt;/th&gt;
+&lt;th&gt;hobbies name&lt;/th&gt;
+&lt;th&gt;h_rn&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Teddy&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Hold Teddy&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Blue Light&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Look Cute&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Teddy&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Follow Kevin&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Kevin&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For example, for the hobbies that don&apos;t have a matching toy, the data of one toy gets repeated over and over again.
+We really want to reduce that to &lt;code&gt;null&lt;/code&gt; values.
+It doesn&apos;t make much of a difference in this toy example, but those values might be long comments on a blog post and take a considerable amount of time to transfer over the wire.
+For this, we replace almost all the columns with expressions like the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;case when x_rn = rn then name end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here &lt;code&gt;x_rn&lt;/code&gt; is the row_number of the subselect that is the source of the column in question.
+&lt;code&gt;rn&lt;/code&gt; is the &lt;em&gt;total row_number&lt;/em&gt; - that is, the row_number that all the subselects join on.
+This condition basically expresses: If the subselect has data for this row, use it; otherwise, just use &lt;code&gt;null&lt;/code&gt;.
+We use this pattern on all normal columns.
+Only columns that are used in further join as described in the following paragraph aren&apos;t treated with this.&lt;/p&gt;
+&lt;p&gt;Now our result looks just as desired.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Minion id&lt;/th&gt;
+&lt;th&gt;m_rn&lt;/th&gt;
+&lt;th&gt;Minion name&lt;/th&gt;
+&lt;th&gt;toys name&lt;/th&gt;
+&lt;th&gt;t_rn&lt;/th&gt;
+&lt;th&gt;hobbies name&lt;/th&gt;
+&lt;th&gt;h_rn&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;Teddy&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Hold Teddy&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Blue Light&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Look Cute&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Follow Kevin&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Kevin&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We return a minimum number of rows and also no duplicate data!
+But we only do that for a single level of nested entities!
+This is solved by simple recursion: The result we got just looks like a simple table. It can, therefore, be used as such. To be precise, it can be used instead of the subselect that adds a row number to a select, because it already has a row number.&lt;/p&gt;
+&lt;h2&gt;Conditions&lt;/h2&gt;
+&lt;p&gt;So far, we basically looked at the query for a &lt;code&gt;findAll&lt;/code&gt; operation.
+And about half a year ago I already had a solution that worked for &lt;code&gt;findAll&lt;/code&gt; but didn&apos;t yield an efficient solution for things like &lt;code&gt;findById&lt;/code&gt; or &lt;code&gt;findByAddressName&lt;/code&gt;.
+This is not a problem with the solution presented above.
+Any where clause gets applied to the inner most select of the aggregate root and, thanks to the joins, restricts all data.
+This is well supported by the indexes you&apos;d create for foreign keys and IDs anyway, so we are confident that this way of querying can be executed efficiently.&lt;/p&gt;
+&lt;h2&gt;Outlook&lt;/h2&gt;
+&lt;p&gt;As outlined at the start of this article, this approach is currently only implemented for Spring Data JDBC, simple aggregate, and very specific query  methods.
+We want to make this available for all aggregates, all Spring Data JDBC query methods, and even Spring Data R2DBC.
+The last one would enable reading full aggregates for Spring Data R2DBC!
+It will certainly have an effect on how you will specify queries for Spring Data Relational in future.
+Of course, downstream projects that consume Spring Data Relational will benefit from this as well.
+Spring&apos;s REST and GraphQL support come to mind.&lt;/p&gt;
+&lt;p&gt;Follow &lt;a href=&quot;https://github.com/spring-projects/spring-data-relational/issues/1445&quot;&gt;this Github issue&lt;/a&gt; to learn more about progress on this topic.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;We found a way to load data from arbitrary trees of tables with a single query.
+This fits Spring Data JDBC perfectly, because the aggregates it is working on are such trees.
+The resulting queries are a little more complex, but RDBMS&apos;s should be able to execute them efficiently.&lt;/p&gt;
+&lt;p&gt;Of course, we are now looking for real world experiences and feedback: Do you experience problems? Does it make a performance difference for you? Please let us know via &lt;a href=&quot;https://github.com/spring-projects/spring-data-relational/issues&quot;&gt;Github&lt;/a&gt;, &lt;a href=&quot;https://stackoverflow.com/questions/tagged/spring-data-jdbc&quot;&gt;Stackoverflow&lt;/a&gt;.&lt;/p&gt;</content:encoded></item></channel></rss>

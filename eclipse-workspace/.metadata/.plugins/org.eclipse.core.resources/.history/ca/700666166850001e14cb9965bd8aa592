@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="tv" 
+	      class="polymorphism3.SamsungTV"
+	      init-method="멤버변수초기화"
+	      destroy-method="자원해제"
+	      lazy-init="true"
+	      scope="singleton"></bean>
+	
+</beans>
+
+
+
+
+
+
+
+
+

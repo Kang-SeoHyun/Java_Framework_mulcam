@@ -1,0 +1,22 @@
+package polymorphism3;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class TVUser {
+	public static void main(String[] args) {
+		TV tv1 = new SamsungTV();
+		TV tv2 = new SamsungTV();
+		TV tv3 = new SamsungTV();
+		System.out.println(tv1.toString());
+		System.out.println(tv2.toString());
+		System.out.println(tv3.toString());
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+package polymorphism3;
+
+public class TVUser {
+	public static void main(String[] args) {
+		// 1. 컨테이너를 생성한다. 
+		GenericXmlApplicationContext container = new GenericXmlApplicationContext();
+		
+		// 2. 컨테이너로부터 사용할 객체를 검색(Lookup)한다. 
+		TV tv = (TV) container.getBean(args[0]);
+		
+		// 3. 검색한 객체를 사용한다. 
+		tv.powerOn();
+		tv.volumeUp();
+		tv.volumeDown();
+		tv.powerOff();
+	}
+}

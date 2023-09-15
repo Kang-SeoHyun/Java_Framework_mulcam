@@ -1,0 +1,13 @@
+package com.multicampus.biz.board;
+
+import java.util.Date;
+
+// 1. VO(Value Object) Å¬·¡½º
+public class BoardVO {
+	private int seq;
+	private String title;
+	private String writer;
+	private String content;
+	private Date regDate;
+	private int cnt;
+}

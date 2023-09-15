@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.apache.catalina.startup.Tomcat"/>
+    <fullyQualifiedTypeName name="polymorphism1.SamsungTV"/>
+    <fullyQualifiedTypeName name="polymorphism2.SamsungTV"/>
+    <fullyQualifiedTypeName name="polymorphism3.LgTV"/>
+    <fullyQualifiedTypeName name="polymorphism3.SamsungTV"/>
+    <fullyQualifiedTypeName name="polymorphism3.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="polymorphism3.GoogleTV"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+    <fullyQualifiedTypeName name="javax.annotation.Resource"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+    <fullyQualifiedTypeName name="org.codehaus.jackson.annotate.JsonIgnore"/>
+    <fullyQualifiedTypeName name="antlr.collections.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="com.multicampus.biz.board.BoardVO"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.text.Normalizer"/>
+    <fullyQualifiedTypeName name="org.springframework.orm.ibatis.SqlMapClientTemplate"/>
+    <fullyQualifiedTypeName name="org.mybatis.spring.SqlSessionTemplate"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.multicampus.biz.user.UserService"/>
+</qualifiedTypeNameHistroy>

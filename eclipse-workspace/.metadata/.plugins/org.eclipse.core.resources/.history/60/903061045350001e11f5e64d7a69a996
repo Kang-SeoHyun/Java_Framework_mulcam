@@ -1,0 +1,11 @@
+package polymorphism3;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class TVUser {
+	public static void main(String[] args) {
+		
+		new GenericXmlApplicationContext("applicationContext.xml");
+
+	}
+}

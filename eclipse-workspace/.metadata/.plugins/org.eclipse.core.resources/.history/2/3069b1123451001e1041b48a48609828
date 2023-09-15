@@ -1,0 +1,21 @@
+package com.multicampus.biz.common;
+
+import org.aspectj.lang.JoinPoint;
+
+public class LogAdvice {
+
+	public void printLog(JoinPoint jp) {
+		String methodName = jp.getSignature().getName();
+		Object[] args = jp.getArgs();
+		
+		System.out.println("[사전 처리] " + methodName + 
+			"() 메소드 ARGS 정보 : " + args[0].toString());
+	}
+}
+
+
+
+
+
+
+

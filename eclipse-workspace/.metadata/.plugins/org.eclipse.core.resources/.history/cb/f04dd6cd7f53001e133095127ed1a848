@@ -1,0 +1,106 @@
+package com.multicampus.controller.board;
+
+import java.io.File;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.multicampus.biz.board.BoardService;
+import com.multicampus.biz.board.BoardVO;
+
+// Model에 "board"라는 이름을 데이터가 등록될 때, 세션에도 "board"라는 이름으로 동일하게 등록해라. 
+@SessionAttributes("board")
+@Controller
+public class BoardController {
+	
+	@Autowired
+	private BoardService boardService;
+	
+	// json 변환
+	@RequestMapping("/json.do")
+	public @ResponseBody List<BoardVO> json(BoardVO vo) throws Exception {
+		vo.setSearchCondition("TITLE");
+		vo.setSearchKeyword("");
+		return boardService.getBoardList(vo);
+	}
+	
+//	// json 변환
+//	@RequestMapping("/json.do")
+//	// @ResponseBody : 리턴되는 자바 객체를 JSON 데이터로 변환하여 HTTP 응답 프로토콜 Body에 출력한다.
+//	public @ResponseBody BoardVO json(BoardVO vo) throws Exception {
+//		return boardService.getBoard(vo);
+//	}
+	
+	// 글 등록 화면으로 이동
+	@RequestMapping("/insertBoardView.do")
+	public String insertBoardView() throws Exception {
+		return "insertBoard";
+	}
+
+	// 글 등록 
+	@RequestMapping("/insertBoard.do")
+	public String insertBoard(BoardVO vo) throws Exception {
+		// 1. 파일 업로드 처리
+		MultipartFile upload = vo.getUploadFile();
+		if(!upload.isEmpty()) {
+			long time = System.currentTimeMillis();
+			String fileName = upload.getOriginalFilename();
+			upload.transferTo(new File("C:/DEV/upload_files/" + time + "_" + fileName));
+		}		
+		
+		// 2. 글 등록 처리
+		boardService.insertBoard(vo);
+		return "redirect:getBoardList.do";
+	}
+	
+	// 글 수정
+	@RequestMapping("/updateBoard.do")
+	// 세션에 "board"라는 이름으로 등록된 객가 있다면 그 객체를 우선 적용해라.
+	public String updateBoard(@ModelAttribute("board") BoardVO vo) throws Exception {
+		boardService.updateBoard(vo);
+		return "forward:getBoardList.do";
+	}
+	
+	// 글 삭제
+	@RequestMapping("/deleteBoard.do")
+	public String deleteBoard(BoardVO vo) throws Exception {
+		boardService.deleteBoard(vo);
+		return "forward:getBoardList.do";
+	}
+	
+	// 글 상세 조회
+	@RequestMapping("/getBoard.do")
+	public String getBoard(BoardVO vo, Model model) throws Exception {
+		model.addAttribute("board", boardService.getBoard(vo)); // Model 정보 저장
+		return "getBoard";   // View 이름 리턴
+	}
+	
+	// 글 목록 검색
+	@RequestMapping("/getBoardList.do")
+	public String getBoardList(BoardVO vo, Model model) throws Exception {
+		// Null Check
+		if(vo.getSearchCondition() == null) vo.setSearchCondition("TITLE");
+		if(vo.getSearchKeyword() == null) vo.setSearchKeyword("");
+		model.addAttribute("boardList", boardService.getBoardList(vo)); // Model 정보 저장
+		model.addAttribute("search", vo); // Model 정보 저장
+		return "getBoardList";   // View 이름 리턴
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

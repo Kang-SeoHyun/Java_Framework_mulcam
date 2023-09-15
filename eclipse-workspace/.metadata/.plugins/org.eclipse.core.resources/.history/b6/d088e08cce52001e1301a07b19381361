@@ -1,0 +1,21 @@
+package hello;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+public class HelloListener implements ServletContextListener {
+
+	public HelloListener() {
+        System.out.println("===> HelloListener 생성");
+    }
+	
+    public void contextInitialized(ServletContextEvent arg0)  { 
+        System.out.println("---> contextInitialized() 호출");
+    }
+
+    public void contextDestroyed(ServletContextEvent arg0)  { 
+    	System.out.println("---> contextDestroyed() 호출");
+    }
+
+	
+}
