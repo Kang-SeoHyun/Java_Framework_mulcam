@@ -1,5 +1,6 @@
 <%@page contentType="text/html; charset=EUC-KR"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -43,7 +44,7 @@
 	<td>${board.seq }</td>
 	<td align="left"><a href="getBoard.do?seq=${board.seq }">${board.title }</a></td>
 	<td>${board.writer }</td>
-	<td>${board.regDate }</td>
+	<td><fmt:formatDate value="${board.regDate }" pattern="yyyy-MM-dd"/></td>
 	<td>${board.cnt }</td>
 </tr>
 </c:forEach>

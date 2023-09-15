@@ -17,12 +17,13 @@ public class BoardDAOJDBC implements BoardDAO {
 	private ResultSet rs = null;
 
 	// BOARD 테이블 관련 SQL 명령어들
-	private final String BOARD_INSERT 	= "insert into board(seq, title, writer, content) values((select nvl(max(seq), 0)+1 from board),?,?,?)";
-	private final String BOARD_UPDATE 	= "update board set title=?, writer=? content=? where seq=?";
-	private final String BOARD_DELETE 	= "delete board where seq=?";
-	private final String BOARD_GET 		= "select * from board where seq=?";
-	private final String BOARD_LIST_T 	= "select * from board where title 	like '%'||?||'%' order by seq desc";
-	private final String BOARD_LIST_C 	= "select * from board where content like '%'||?||'%' order by seq desc";
+	private final String BOARD_INSERT = "insert into board(seq, title, writer, content) values((select nvl(max(seq), 0)+1 from board),?,?,?)";
+	private final String BOARD_UPDATE = "update board set title=?, writer=?, content=? where seq=?";
+	private final String BOARD_DELETE = "delete board where seq=?";
+	private final String BOARD_GET    = "select * from board where seq=?";
+	private final String BOARD_LIST_T = "select * from board where title   like '%'||?||'%' order by seq desc";
+	private final String BOARD_LIST_C = "select * from board where content like '%'||?||'%' order by seq desc";
+															
 
 	public BoardDAOJDBC() {
 		System.out.println("===> BoardDAO 생성");
@@ -49,7 +50,7 @@ public class BoardDAOJDBC implements BoardDAO {
 	// 글 수정
 	public void updateBoard(BoardVO vo) {
 		System.out.println("===> JDBC 기반으로 updateBoard() 기능 처리");
-		System.out.println("===> 전달된 값");
+		System.out.println("수정 요청시 전달된 값 : " + vo.toString());
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_UPDATE);
@@ -112,10 +113,9 @@ public class BoardDAOJDBC implements BoardDAO {
 		List<BoardVO> boardList = new ArrayList<BoardVO>();
 		try {
 			conn = JDBCUtil.getConnection();
-			if (vo.getSearchCondition().equals("TITLE")) {
-				stmt = conn.prepareStatement(BOARD_LIST_T);				
-			}
-			else if (vo.getSearchCondition().equals("CONTENT")) {
+			if(vo.getSearchCondition().equals("TITLE")) {
+				stmt = conn.prepareStatement(BOARD_LIST_T);
+			} else if(vo.getSearchCondition().equals("CONTENT")) {
 				stmt = conn.prepareStatement(BOARD_LIST_C);
 			}
 			stmt.setString(1, vo.getSearchKeyword());

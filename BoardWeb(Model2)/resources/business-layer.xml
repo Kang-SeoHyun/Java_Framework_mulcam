@@ -13,8 +13,8 @@
 	<context:component-scan base-package="com.multicampus.biz"></context:component-scan>
 
 	<!-- 실제로 사용할 DAO 하나만 등록한다. -->
-	<bean class="com.multicampus.biz.board.BoardDAOSPRING"></bean>
-	<bean class="com.multicampus.biz.user.UserDAOSPRING"></bean>
+	<bean class="com.multicampus.biz.board.BoardDAOMYBATIS"></bean>
+	<bean class="com.multicampus.biz.user.UserDAOMYBATIS"></bean>
 
 	<!-- Annotation 기반의 AOP 설정 -->
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
@@ -27,6 +27,26 @@
 		<property name="url"             value="${board.jdbc.jdbcUrl}"></property>
 		<property name="username"        value="${board.jdbc.username}"></property>
 		<property name="password"        value="${board.jdbc.password}"></property>
+	</bean>
+	
+	<!-- Spring과 iBATIS 연동 설정 -->
+	<bean id="factoryBean" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation" value="classpath:sql-map-config(ibatis).xml"></property>
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<bean class="org.springframework.orm.ibatis.SqlMapClientTemplate">
+		<property name="sqlMapClient" ref="factoryBean"></property>
+	</bean>
+	
+	<!-- Spring과 MyBatis 연동 설정 -->
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="classpath:sql-map-config(mybatis).xml"></property>
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<bean class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSession"></constructor-arg>
 	</bean>
 	
 	<!-- JdbcTempalate 등록 -->

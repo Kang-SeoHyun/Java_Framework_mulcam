@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<typeAlias type="com.multicampus.biz.board.BoardVO" alias="board"/>
+		<typeAlias type="com.multicampus.biz.user.UserVO" alias="user"/>
+	</typeAliases>
+
+	<mappers>
+		<mapper resource="mappings/board-mapping(mybatis).xml"/>
+		<mapper resource="mappings/user-mapping(mybatis).xml"/>
+	</mappers>
+</configuration>
+
+
+
+
+
+
+

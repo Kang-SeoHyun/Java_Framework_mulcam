@@ -2,16 +2,21 @@ package com.multicampus.controller.user;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.multicampus.biz.user.UserDAOJDBC;
+import com.multicampus.biz.user.UserService;
 import com.multicampus.biz.user.UserVO;
 
 @Controller
 public class LoginController {
+	
+	@Autowired
+	private UserService userService;
 	
 	// 로그아웃
 	@RequestMapping("/logout.do")
@@ -30,8 +35,8 @@ public class LoginController {
 	
 	// 로그인 처리
 	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
-	public String login(UserVO vo, UserDAOJDBC dao, HttpSession session) throws Exception {
-		UserVO user = dao.getUser(vo);
+	public String login(UserVO vo, HttpSession session) throws Exception {
+		UserVO user = userService.getUser(vo);
 		if(user != null) {	// 로그인 성공
 			session.setAttribute("user", user);			
 			return "forward:getBoardList.do";
