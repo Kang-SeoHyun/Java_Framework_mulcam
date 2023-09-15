@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;BoardWeb&apos; to &apos;BoardWeb(IoC)&apos;" description="Rename resource &apos;BoardWeb&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/BoardWeb" name="BoardWeb(IoC)" stamp="1694393179367" updateReferences="true"/>
-</session>
